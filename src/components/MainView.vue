@@ -1,25 +1,33 @@
 <template>
-
-  <IndexView :global="global"></IndexView>
-  
+  <index-view></index-view>
 </template>
 
 <script>
-import IndexView from './search/index';
+import _ from 'lodash';
+import $ from 'jquery';
+import IndexView from './summary/index.vue';
 
 export default {
-  name: 'MainView',
+  name: "MainView",
   props: {
-    global: Object,
-    auth: Object
+    global: Object
   },
   components:{
     IndexView
+  },
+  data() {
+    return {
+        
+    }
+  },
+  methods: {
+    
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+  
 </style>

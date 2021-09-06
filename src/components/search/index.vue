@@ -142,7 +142,7 @@ export default {
 
             this.search.loading = true;
             let param = encodeURIComponent( JSON.stringify( {term:this.search.term, preset:null} ) );
-            this.m3.callFS("/matrix/m3search/searchByTerm.js", param).then(res=>{
+            this.m3.callFS("/matrix/m3eventstate/searchByTerm.js", param).then(res=>{
                 this.search.result = res.message;
                 this.search.loading = false;
             }).catch(err=>{
@@ -162,7 +162,7 @@ export default {
         },
         weclome(){
 
-            this.m3.callFS("/matrix/m3search/weclome.js",null).then( (rtn)=>{
+            this.m3.callFS("/matrix/m3eventstate/weclome.js",null).then( (rtn)=>{
                 let message = rtn.message;
 
                 this.$notify({
